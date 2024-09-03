@@ -1,0 +1,7 @@
+.home .image img {
+    width: 100%; /* Ensures the image covers the width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 100%; /* Sets the maximum width */
+    max-height: 900px; /* Sets the maximum height */
+    object-fit: cover; /* Ensures the image covers the container while maintaining the aspect ratio */
+}
