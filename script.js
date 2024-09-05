@@ -9,4 +9,4 @@ setInterval(() => {
         breatheText.textContent = 'Breathe In';
         isBreathingIn = true;
     }
-}, 4000);  // Change text every 4 seconds to match the bubble animation
+}, 4000);

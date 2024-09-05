@@ -41,23 +41,27 @@ body {
     display: none;
 }
 
+.main {
+    padding: 2rem;
+}
+
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
-    background-image: url('image/home page.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background-color: #EAD7D7;
+    position: relative;
 }
 
 .home h3 {
     font-size: 3rem;
+    color: #333;
 }
 
 .home p {
+    color: #555;
     font-size: 1.5rem;
     margin-bottom: 2rem;
     width: 70%;
