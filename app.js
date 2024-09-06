@@ -1,12 +1,6 @@
-let breatheText = document.getElementById('breathe-text');
-let isBreathingIn = true;
+// You can use this file to implement any interactivity needed.
+// For now, it's left blank as the focus is mainly on the design and structure.
 
-setInterval(() => {
-    if (isBreathingIn) {
-        breatheText.textContent = 'Breathe Out';
-        isBreathingIn = false;
-    } else {
-        breatheText.textContent = 'Breathe In';
-        isBreathingIn = true;
-    }
-}, 4000);  // Change text every 4 seconds to match the bubble animation
+document.querySelector('#menu-btn').addEventListener('click', () => {
+    document.querySelector('.navbar').classList.toggle('active');
+});
