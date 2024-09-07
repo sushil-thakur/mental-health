@@ -1,3 +1,5 @@
+/* home */
+
 * {
     margin: 0;
     padding: 0;
@@ -123,7 +125,7 @@ body {
     font-size: 1rem;
     color: #777;
 }
-/* General Reset */
+/* about Reset */
 * {
     margin: 0;
     padding: 0;
@@ -299,4 +301,78 @@ header {
 
 .service-list div:hover {
     transform: translateY(-10px);
+}
+
+/* for doctor */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-color: #00a8a8;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.header a.logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+.header .navbar a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.doctor-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+.doctor-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.doctor-card:hover {
+    transform: translateY(-10px);
+}
+.doctor-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.doctor-card h2 {
+    font-size: 22px;
+    color: #333;
+}
+.doctor-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
+}
+.doctor-card a.view-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00a8a8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.doctor-card a.view-more:hover {
+    color: #007b7b;
 }
