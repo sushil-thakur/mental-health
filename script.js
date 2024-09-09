@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     
     menuBtn.addEventListener('click', () => {
-        navbar.classList.toggle('active'); // Show/hide the navbar when the menu button is clicked
+        navbar.classList.toggle('active'); 
     });
 
     // Form validation
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const date = document.getElementById('date').value;
 
         if (!name || !number || !email || !date) {
-            event.preventDefault(); // Prevent form submission if any field is empty
+            event.preventDefault(); 
             alert('Please fill out all fields before submitting the form.');
             return;
         }
@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //for blog
 document.addEventListener('DOMContentLoaded', function() {
-    const API_KEY = 'AIzaSyDP_bwfaLbv0Yct9U1SDoA8cgyimMGj__0'; // Replace with your actual API key
-    const CHANNEL_ID = 'UCpuqYFKLkcEryEieomiAv3Q'; // Your YouTube channel ID
+    const API_KEY = 'AIzaSyDP_bwfaLbv0Yct9U1SDoA8cgyimMGj__0'; 
+    const CHANNEL_ID = 'UCpuqYFKLkcEryEieomiAv3Q'; 
     const videoContainer = document.getElementById('video-container');
     const searchBtn = document.getElementById('search-btn');
     const searchQuery = document.getElementById('search-query');
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display videos
     function displayVideos(videos) {
-        videoContainer.innerHTML = ''; // Clear previous results
+        videoContainer.innerHTML = ''; 
         videos.forEach(video => {
             const videoBox = document.createElement('div');
             videoBox.classList.add('box');
