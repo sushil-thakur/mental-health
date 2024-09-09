@@ -6,6 +6,7 @@
     <title>Mental Health - Appointment</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- Link to the JS file -->
 </head>
 <body>
     <header class="header">
@@ -29,12 +30,12 @@
                 <img src="image/appointment.jpg" alt="Appointment Image">
             </div>
 
-            <form action="">
+            <form id="appointment-form" action="">
                 <h3>Make an Appointment</h3>
-                <input type="text" placeholder="Your Name" class="box">
-                <input type="number" placeholder="Your Number" class="box">
-                <input type="email" placeholder="Your Email" class="box">
-                <input type="date" class="box">
+                <input type="text" placeholder="Your Name" class="box" id="name">
+                <input type="number" placeholder="Your Number" class="box" id="number">
+                <input type="email" placeholder="Your Email" class="box" id="email">
+                <input type="date" class="box" id="date">
                 <input type="submit" value="Make Appointment" class="btn">
             </form>
         </div>

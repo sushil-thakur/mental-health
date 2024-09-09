@@ -11,7 +11,7 @@
     <header class="header">
         <a href="index.html" class="logo"> <i class="fas fa-brain"></i><strong>WC</strong> mental health</a>
         <nav class="navbar">
-            <a href="index.html#home">Home</a>
+            <a href="home.html">Home</a>
             <a href="about.html">About</a>
             <a href="doctor.html">Doctors</a>
             <a href="appointment.html">Appointment</a>
@@ -20,48 +20,18 @@
         <div id="menu-btn" class="fas fa-bars"></div>
     </header>
 
+    <section class="search-bar">
+        <input type="text" id="search-query" placeholder="Search for videos..." />
+        <button id="search-btn">Search</button>
+    </section>
+
     <section class="blogs" id="blogs">
-        <h1 class="heading"> Our <span>Blogs</span> </h1>
-        <div class="box-container">
-            <div class="box">
-                <div class="image">
-                    <img src="image/blog-1.jpg" alt="Blog Image 1">
-                </div>
-                <div class="content">
-                    <a href="#"><i class="fas fa-calendar"></i> 1st May, 2024</a>
-                    <a href="#"><i class="fas fa-user"></i> by Sushil</a>
-                    <h3>Blog Title 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quidem.</p>
-                    <a href="#" class="btn">Read more <span class="fas fa-chevron-right"></span></a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/blog-2.jpg" alt="Blog Image 2">
-                </div>
-                <div class="content">
-                    <a href="#"><i class="fas fa-calendar"></i> 15th May, 2024</a>
-                    <a href="#"><i class="fas fa-user"></i> by Sushil</a>
-                    <h3>Blog Title 2</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quidem.</p>
-                    <a href="#" class="btn">Read more <span class="fas fa-chevron-right"></span></a>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="image">
-                    <img src="image/blog-3.jpg" alt="Blog Image 3">
-                </div>
-                <div class="content">
-                    <a href="#"><i class="fas fa-calendar"></i> 30th May, 2024</a>
-                    <a href="#"><i class="fas fa-user"></i> by Sushil</a>
-                    <h3>Blog Title 3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quidem.</p>
-                    <a href="#" class="btn">Read more <span class="fas fa-chevron-right"></span></a>
-                </div>
-            </div>
+        <h1 class="heading">Search Results</h1>
+        <div class="box-container" id="video-container">
+            <!-- Dynamic YouTube search results will load here -->
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
