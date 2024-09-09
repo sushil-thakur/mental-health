@@ -528,52 +528,84 @@ form .btn:hover {
     margin-bottom: 10px;
 }
 /* blog */
+/* General body settings */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Search Bar */
 .search-bar {
     text-align: center;
     margin: 20px;
 }
 
 .search-bar input {
-    width: 300px;
+    width: 500px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 16px;
+    box-shadow: none;
+    outline: none;
 }
 
 .search-bar button {
     padding: 10px 15px;
-    background-color: #0f4c75;
+    background-color: #ff0000;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 16px;
     cursor: pointer;
 }
 
-.search-bar button:hover {
-    background-color: #3282b8;
+#voice-btn {
+    background-color: #ff3f34;
+    color: white;
+    border: none;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
+#voice-btn:hover {
+    background-color: #ff5e57;
+}
+
+/* Video Grid */
 #video-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
+/* Video Box */
 .box {
     background: white;
-    border-radius: 10px;
-    width: 300px;
-    margin: 15px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    width: 31%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: scale(1.05);
 }
 
 .box img {
     width: 100%;
-    height: 170px;
+    height: 180px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     object-fit: cover;
 }
 
@@ -582,25 +614,144 @@ form .btn:hover {
 }
 
 .box .content h3 {
-    font-size: 1.2em;
+    font-size: 1rem;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .box .content p {
-    font-size: 0.9em;
-    color: #555;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
 }
 
-.box .btn {
-    display: inline-block;
-    margin-top: 10px;
-    background: #0f4c75;
+.box .content a {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #ff0000;
     color: white;
-    padding: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 5px;
 }
 
-.box .btn:hover {
-    background: #3282b8;
+.btn:hover {
+    background-color: #e60000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+    }
+}
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px; /* Adjusted from 20px to 10px */
+}
+
+.box {
+    width: 30%; /* Adjust based on how many videos you want per row */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content a {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+    flex-grow: 1; /* Ensures that the title grows and keeps the button at the bottom */
+}
+
+.content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: auto; /* Ensures the button sticks to the bottom */
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 45%;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
 }
