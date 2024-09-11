@@ -42,7 +42,7 @@ body {
 
 .hero {
     height: 100vh;
-    background-image: url('image/beautiful-calm-background.jpg');
+    background-image: url('C:\Users\ACER\Documents\mental heath project\image\home page.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -119,6 +119,35 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
 }
+
+/* Animated Image */
+.animated-image {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    animation: pulse 4s infinite;
+}
+
+.animated-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+   
+
+
+
 
 /* About Section */
 .about {
