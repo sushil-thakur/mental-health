@@ -146,7 +146,7 @@ footer {
 }
 /* footer */
 .footer {
-    background-color: #00796b; /* Main footer background color */
+    background-color: #00796b; 
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -186,10 +186,10 @@ footer {
 }
 
 .footer-bottom {
-    background-color: #004d40; /* Slightly darker shade for footer-bottom */
+    background-color: #004d40; 
     margin-top: 20px;
     border-top: 1px solid #444;
-    padding: 10px 0; /* Adjusted padding for consistency */
+    padding: 10px 0; 
 }
 
 
