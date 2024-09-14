@@ -1,32 +1,12 @@
-<?php
-$conn = mysqli_connect('localhost','root','','contact_db') or die('connection failed');
 
-if(isset($_POST['submit'])){
-
-   $name = mysqli_real_escape_string($conn, $_POST['name']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $number = $_POST['number'];
-   $date = $_POST['date'];
-
-   $insert = mysqli_query($conn, "INSERT INTO `contact_form`(name, email, number, date) VALUES('$name','$email','$number','$date')") or die('query failed');
-
-   if($insert){
-      $message[] = 'Appointment made successfully!';
-   } else {
-      $message[] = 'Appointment failed';
-   }
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mental Health - Appointment</title>
+    <title>MindEase - Your Mental Health Companion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -37,7 +17,7 @@ if(isset($_POST['submit'])){
             <a href="home.html">Home</a>
             <a href="about.html">About</a>
             <a href="doctor.html">Doctors</a>
-            <a href="appointment.php">Appointment</a>
+            <a href="appointment.html">Appointment</a>
             <a href="blog.html">Blogs</a>
         </nav>
         <button id="menu-btn" class="fas fa-bars" aria-label="Menu"></button>
@@ -50,14 +30,14 @@ if(isset($_POST['submit'])){
                 <img src="image/appointment.jpg" alt="Appointment Image">
             </div>
 
-            <form id="appointment-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <?php
-                    if(isset($message)) {
-                        foreach($message as $msg) {
-                            echo '<p class="message">' . $msg . '</p>';
-                        }
-                    }
-                ?>
+            <form action="https://api.web3forms.com/submit"
+      method="POST"
+      >
+        <input type="hidden"
+        name="access_key"
+        value="7c187539-97f1-4135-a9f1-e4de43325f5f"
+        />
+                
                 <h3>Make an Appointment</h3>
                 <input type="text" name="name" placeholder="Your Name" class="box" required>
                 <input type="number" name="number" placeholder="Your Number" class="box" required>
@@ -75,7 +55,7 @@ if(isset($_POST['submit'])){
                 <a href="home.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="doctor.html">Doctors</a>
-                <a href="appointment.php">Appointment</a>
+                <a href="appointment.html">Appointment</a>
                 <a href="blog.html">Blogs</a>
             </div>
             <div class="contact-info">
