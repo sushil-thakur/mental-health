@@ -151,3 +151,107 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the elements
+    const chatIcon = document.getElementById('chat-icon');
+    const chatbox = document.getElementById('chatbox');
+    const closeChatbox = document.getElementById('close-chatbox');
+    const doctorChats = document.querySelectorAll('.doctor-chat');
+    const chatInterface = document.getElementById('chat-interface');
+    const doctorList = document.getElementById('doctor-list');
+    const chatMessages = document.getElementById('chat-messages');
+    const doctorNameElement = document.getElementById('chat-doctor-name');
+    const doctorPhotoElement = document.getElementById('doctor-photo');
+    const messageInput = document.getElementById('chat-message-input');
+    const sendMessageBtn = document.getElementById('send-message-btn');
+
+    // Debugging: Check if elements are correctly selected
+    console.log('chatIcon:', chatIcon);
+    console.log('chatbox:', chatbox);
+    console.log('closeChatbox:', closeChatbox);
+    console.log('doctorChats:', doctorChats);
+    console.log('chatInterface:', chatInterface);
+    console.log('doctorList:', doctorList);
+    console.log('chatMessages:', chatMessages);
+    console.log('doctorNameElement:', doctorNameElement);
+    console.log('doctorPhotoElement:', doctorPhotoElement);
+    console.log('messageInput:', messageInput);
+    console.log('sendMessageBtn:', sendMessageBtn);
+
+    // Toggle chatbox visibility when chat icon is clicked
+    if (chatIcon) {
+        chatIcon.addEventListener('click', () => {
+            if (chatbox) {
+                chatbox.style.display = 'block';
+                if (doctorList) doctorList.style.display = 'block';
+                if (chatInterface) chatInterface.style.display = 'none';
+            }
+            console.log('Chatbox opened');
+        });
+    } else {
+        console.error('Chat icon not found');
+    }
+
+    if (closeChatbox) {
+        closeChatbox.addEventListener('click', () => {
+            if (chatbox) chatbox.style.display = 'none';
+            console.log('Chatbox closed');
+        });
+    } else {
+        console.error('Close chatbox button not found');
+    }
+
+    // Open chat for selected doctor
+    if (doctorChats.length) {
+        doctorChats.forEach(doctor => {
+            doctor.addEventListener('click', () => {
+                const doctorName = doctor.getAttribute('data-doctor');
+                const doctorPhoto = doctor.getAttribute('data-photo');
+
+                if (doctorNameElement) {
+                    doctorNameElement.textContent = doctorName;
+                } else {
+                    console.error('Doctor name element not found');
+                }
+
+                if (doctorPhotoElement) {
+                    doctorPhotoElement.src = doctorPhoto;
+                } else {
+                    console.error('Doctor photo element not found');
+                }
+
+                // Hide doctor list and show chat interface
+                if (doctorList) doctorList.style.display = 'none';
+                if (chatInterface) chatInterface.style.display = 'flex';
+
+                // Clear previous messages
+                if (chatMessages) chatMessages.innerHTML = '';
+                console.log('Chat with', doctorName, 'opened');
+            });
+        });
+    } else {
+        console.error('No doctor chat elements found');
+    }
+
+    // Send message function
+    if (sendMessageBtn) {
+        sendMessageBtn.addEventListener('click', () => {
+            const messageText = messageInput.value;
+            if (messageText.trim() !== '') {
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message');
+                messageElement.textContent = messageText;
+                if (chatMessages) chatMessages.appendChild(messageElement);
+
+                // Clear input
+                if (messageInput) messageInput.value = '';
+
+                // Scroll to the latest message
+                if (chatMessages) chatMessages.scrollTop = chatMessages.scrollHeight;
+                console.log('Message sent:', messageText);
+            }
+        });
+    } else {
+        console.error('Send message button not found');
+    }
+});
